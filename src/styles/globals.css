@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom properties for easy tuning */
+:root {
+  --bg-top: #0B0C10;
+  --bg-mid: #0A0C12;
+  --bg-bot: #07090F;
+  --violet: #7E5EFF;
+  --indigo: #5A3DF0;
+  --glass-bg: rgba(12, 14, 20, 0.55);
+  --glass-bg-scrolled: rgba(12, 14, 20, 0.66);
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border-scrolled: rgba(255, 255, 255, 0.08);
+}
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  body {
+    @apply text-text-primary;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.2px;
+    background: var(--bg-top);
+  }
+}
+
+@layer utilities {
+  /* Primary gradient for CTA buttons */
+  .gradient-primary {
+    background: linear-gradient(90deg, #5A3DF0 0%, #7E5EFF 100%);
+  }
+
+  /* Layered background with depth (3 gradient layers) */
+  .gradient-background-layered {
+    background:
+      /* Layer 3: violet ambient glow - creates techy atmosphere */
+      radial-gradient(60% 35% at 50% 80%,
+        rgba(122, 94, 255, 0.10) 0%,
+        rgba(122, 94, 255, 0.05) 40%,
+        rgba(122, 94, 255, 0.00) 70%
+      ),
+      /* Layer 2: subtle center sheen - barely visible focus point */
+      radial-gradient(35% 18% at 50% 40%,
+        rgba(255, 255, 255, 0.035) 0%,
+        rgba(255, 255, 255, 0.015) 40%,
+        rgba(255, 255, 255, 0.00) 100%
+      ),
+      /* Layer 1: vertical base gradient - rich dark canvas */
+      linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 40%, var(--bg-bot) 100%);
+  }
+
+  /* Glassy navigation effect */
+  .glass-nav {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px) saturate(120%);
+    -webkit-backdrop-filter: blur(10px) saturate(120%);
+    border: 1px solid var(--glass-border);
+  }
+
+  /* Glassy nav on scroll - darkens slightly */
+  body.is-scrolled .glass-nav {
+    background: var(--glass-bg-scrolled);
+    border-color: var(--glass-border-scrolled);
+  }
+
+  /* CTA button glow effect */
+  .glow-effect {
+    box-shadow: 0 0 18px rgba(122, 94, 255, 0.35);
+  }
+
+  .glow-effect-strong {
+    box-shadow: 0 0 24px rgba(122, 94, 255, 0.45);
+  }
+
+  /* Horizon arc effect - dark circle with violet rim */
+  .horizon-arc {
+    background:
+      /* Dark well - actually darkens the bottom area */
+      radial-gradient(80% 60% at 50% 100%,
+        rgba(0, 0, 0, 0.55) 0%,
+        rgba(0, 0, 0, 0.40) 35%,
+        rgba(0, 0, 0, 0.00) 70%
+      ),
+      /* Subtle violet rim - hint of lens glow */
+      radial-gradient(70% 55% at 50% 100%,
+        rgba(122, 94, 255, 0.18) 0%,
+        rgba(122, 94, 255, 0.10) 25%,
+        rgba(122, 94, 255, 0.00) 55%
+      );
+    /* Shape the top into an arc, not a full bubble */
+    -webkit-mask-image: radial-gradient(80% 60% at 50% 100%, black 20%, transparent 70%);
+    mask-image: radial-gradient(80% 60% at 50% 100%, black 20%, transparent 70%);
+    /* Soft lift from background */
+    filter: drop-shadow(0 -8px 32px rgba(0, 0, 0, 0.35));
+    opacity: 0.95;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
