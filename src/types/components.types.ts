@@ -66,6 +66,7 @@ export interface CTAButtonProps {
   variant: CTAButtonVariant;
   children: ReactNode;
   onClick?: () => void;
+  href?: string;
   className?: string;
 }
 

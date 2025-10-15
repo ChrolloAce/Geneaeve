@@ -12,8 +12,8 @@ export default function CTAButtonGroup({ className = '' }: CTAButtonGroupProps) 
       <CTAButton variant="secondary">
         Learn More
       </CTAButton>
-      <CTAButton variant="primary">
-        Get Started
+      <CTAButton variant="primary" href="https://cal.com/geneave/intro-call">
+        Book a Call
       </CTAButton>
     </div>
   );

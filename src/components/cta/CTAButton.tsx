@@ -11,6 +11,7 @@ export default function CTAButton({
   variant,
   children,
   onClick,
+  href,
   className = '',
 }: CTAButtonProps) {
   const baseStyles = `
@@ -25,6 +26,8 @@ export default function CTAButton({
     animate-scale-in
     will-change-transform
     w-full sm:w-auto
+    inline-block
+    text-center
   `;
 
   const variantStyles = {
@@ -44,10 +47,25 @@ export default function CTAButton({
     `,
   };
 
+  const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${className}`;
+
+  if (href) {
+    return (
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={combinedClassName}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
     <button
       onClick={onClick}
-      className={`${baseStyles} ${variantStyles[variant]} ${className}`}
+      className={combinedClassName}
     >
       {children}
     </button>

@@ -11,7 +11,7 @@ export default function LandingPage() {
     <main className="relative overflow-hidden">
       <Navbar variant="transparent" />
       <HeroSection
-        headline="Launch Your Software or App in 7 Days"
+        headline="Launch Your Custom Software or App in Just 7 Days"
         subtext="Design, Backend, and Frontend — We deliver complete solutions from concept to launch, empowering your vision with expert development at lightning speed."
       />
     </main>
