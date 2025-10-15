@@ -7,10 +7,11 @@ import { NavbarActionsProps } from '@/types/components.types';
 
 export default function NavbarActions({ className = '' }: NavbarActionsProps) {
   return (
-    <div className={`flex items-center gap-4 ${className}`}>
+    <div className={`flex items-center gap-2 sm:gap-4 ${className}`}>
       {/* Ghost button - quiet/minimal styling */}
       <button
         className="
+          hidden sm:block
           text-[#CDD1DE]
           hover:text-white
           text-sm
@@ -26,10 +27,11 @@ export default function NavbarActions({ className = '' }: NavbarActionsProps) {
       <button
         className="
           rounded-full 
-          px-5 py-2 
+          px-4 sm:px-5 
+          py-2 
           font-medium 
           text-white 
-          text-sm
+          text-xs sm:text-sm
           gradient-primary
           glow-effect
           hover:brightness-110 
@@ -38,9 +40,11 @@ export default function NavbarActions({ className = '' }: NavbarActionsProps) {
           transition-all 
           duration-300
           will-change-transform
+          whitespace-nowrap
         "
       >
-        Create Account
+        <span className="hidden sm:inline">Create Account</span>
+        <span className="sm:hidden">Sign Up</span>
       </button>
     </div>
   );

@@ -23,19 +23,19 @@ export default function HeroSection({ headline, subtext, className = '' }: HeroS
     <section
       className={`
         relative
-        min-h-[120vh]
+        min-h-screen sm:min-h-[110vh] lg:min-h-[120vh]
         flex
         flex-col
         items-center
         justify-center
         gradient-background-layered
         overflow-hidden
-        px-6
-        py-32
+        px-4 sm:px-6
+        py-24 sm:py-28 lg:py-32
         ${className}
       `}
     >
-      <div className="text-center z-10 relative">
+      <div className="text-center z-10 relative w-full max-w-6xl">
         <HeroHeadline text={headline} />
         <HeroSubtext text={subtext} />
         <CTAButtonGroup />

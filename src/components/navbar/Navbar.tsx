@@ -25,10 +25,11 @@ export default function Navbar({ variant = 'transparent', className = '' }: Navb
           glass-nav
           mx-auto 
           mt-4 
-          w-[min(1200px,92%)] 
+          w-[95%] sm:w-[92%]
+          max-w-[1200px]
           rounded-full
-          px-6 md:px-8 
-          h-[72px] 
+          px-4 sm:px-6 md:px-8 
+          h-[64px] sm:h-[72px]
           flex 
           items-center 
           justify-between 

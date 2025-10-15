@@ -14,15 +14,17 @@ export default function CTAButton({
   className = '',
 }: CTAButtonProps) {
   const baseStyles = `
-    px-6 py-3 
+    px-5 sm:px-6 
+    py-2.5 sm:py-3 
     rounded-full
     font-semibold 
     text-white 
-    text-base
+    text-sm sm:text-base
     transition-all 
     duration-300
     animate-scale-in
     will-change-transform
+    w-full sm:w-auto
   `;
 
   const variantStyles = {

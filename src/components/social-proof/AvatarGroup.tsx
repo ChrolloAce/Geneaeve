@@ -14,12 +14,12 @@ export default function AvatarGroup({
   const visibleAvatars = avatars.slice(0, maxVisible);
 
   return (
-    <div className={`flex -space-x-3 ${className}`}>
+    <div className={`flex -space-x-2 sm:-space-x-3 ${className}`}>
       {visibleAvatars.map((avatar, index) => (
         <div
           key={avatar.id}
           className="
-            w-10 h-10 
+            w-9 h-9 sm:w-10 sm:h-10
             rounded-full 
             border-2 
             border-primary-bg 

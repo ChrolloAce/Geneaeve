@@ -7,7 +7,7 @@ import { NavbarLinksProps } from '@/types/components.types';
 
 export default function NavbarLinks({ links, className = '' }: NavbarLinksProps) {
   return (
-    <ul className={`flex gap-2 ${className}`}>
+    <ul className={`hidden lg:flex gap-2 ${className}`}>
       {links.map((link) => (
         <li key={link.label}>
           <a

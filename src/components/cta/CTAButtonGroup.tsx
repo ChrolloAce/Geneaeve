@@ -8,7 +8,7 @@ import CTAButton from './CTAButton';
 
 export default function CTAButtonGroup({ className = '' }: CTAButtonGroupProps) {
   return (
-    <div className={`flex gap-4 justify-center mt-8 ${className}`}>
+    <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mt-6 sm:mt-8 px-4 ${className}`}>
       <CTAButton variant="secondary">
         Learn More
       </CTAButton>

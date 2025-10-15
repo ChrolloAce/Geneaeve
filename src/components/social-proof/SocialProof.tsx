@@ -14,7 +14,7 @@ export default function SocialProof({
   className = '',
 }: SocialProofProps) {
   return (
-    <div className={`flex flex-col items-center mt-10 ${className}`}>
+    <div className={`flex flex-col items-center mt-8 sm:mt-10 px-4 ${className}`}>
       <AvatarGroup avatars={avatars} />
       <StatsText count={statsCount} label={statsLabel} />
     </div>

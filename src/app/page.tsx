@@ -11,8 +11,8 @@ export default function LandingPage() {
     <main className="relative overflow-hidden">
       <Navbar variant="transparent" />
       <HeroSection
-        headline="Unlock Your Potential With Personalized Investment Strategies."
-        subtext="We're here to empower you every step of the way. Whether you're managing your personal finances or seeking innovative investment opportunities."
+        headline="Launch Your Software or App in 7 Days"
+        subtext="Design, Backend, and Frontend — We deliver complete solutions from concept to launch, empowering your vision with expert development at lightning speed."
       />
     </main>
   );
