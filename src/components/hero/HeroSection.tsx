@@ -23,7 +23,7 @@ export default function HeroSection({ headline, subtext, className = '' }: HeroS
     <section
       className={`
         relative
-        min-h-screen
+        min-h-[120vh]
         flex
         flex-col
         items-center
@@ -31,10 +31,11 @@ export default function HeroSection({ headline, subtext, className = '' }: HeroS
         gradient-background-layered
         overflow-hidden
         px-6
+        py-32
         ${className}
       `}
     >
-      <div className="text-center mt-24 z-10 relative">
+      <div className="text-center z-10 relative">
         <HeroHeadline text={headline} />
         <HeroSubtext text={subtext} />
         <CTAButtonGroup />

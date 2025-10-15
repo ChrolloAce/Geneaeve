@@ -19,14 +19,14 @@ const navigationLinks: NavLink[] = [
 
 export default function Navbar({ variant = 'transparent', className = '' }: NavbarProps) {
   return (
-    <nav className={`sticky top-0 z-50 ${className}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 ${className}`}>
       <div
         className="
           glass-nav
           mx-auto 
           mt-4 
           w-[min(1200px,92%)] 
-          rounded-xl
+          rounded-full
           px-6 md:px-8 
           h-[72px] 
           flex 
