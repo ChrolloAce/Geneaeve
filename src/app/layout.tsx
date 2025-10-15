@@ -15,9 +15,14 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Geneaeve - Personalized Investment Strategies',
-  description: 'Unlock your potential with personalized investment strategies. Empowering you every step of the way.',
-  keywords: 'investment, finance, personalized strategies, wealth management',
+  title: 'Geneaeve - Launch Your Custom Software or App in 7 Days',
+  description: 'Design, Backend, and Frontend — We deliver complete solutions from concept to launch, empowering your vision with expert development at lightning speed.',
+  keywords: 'software development, app development, custom software, web development, backend, frontend, design',
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
