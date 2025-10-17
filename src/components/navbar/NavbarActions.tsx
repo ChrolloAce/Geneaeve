@@ -43,8 +43,7 @@ export default function NavbarActions({ className = '' }: NavbarActionsProps) {
           whitespace-nowrap
         "
       >
-        <span className="hidden sm:inline">Create Account</span>
-        <span className="sm:hidden">Sign Up</span>
+        Book a Call
       </button>
     </div>
   );
